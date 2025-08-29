@@ -1,0 +1,47 @@
+/* src/App.css */
+
+/* This is the initial setup for your app's main container */
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* A light gray background */
+  font-family: sans-serif;
+}
+
+/* The button that opens the chat */
+.open-chat-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #7b46d3; /* A vibrant purple */
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite cubic-bezier(0.66, 0.01, 0.73, 0.58);
+}
+
+.open-chat-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Define the pulsing animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(123, 70, 211, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(123, 70, 211, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(123, 70, 211, 0);
+  }
+}

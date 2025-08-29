@@ -1,0 +1,182 @@
+/* src/components/ChatInterface.css */
+
+/* Main container styles */
+.chat-container {
+  max-width: 480px;
+  height: 600px; /* Fixed height for the chat window */
+  margin: 2.5rem auto;
+  background-color: #171b21; /* Dark background */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #2f343a;
+  background-color: #171b21;
+}
+
+.chat-header h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+
+.header-icons {
+  display: flex;
+  gap: 0.75rem;
+  color: #6b7280;
+}
+
+.header-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.header-icon:hover {
+  color: #9ca3af;
+}
+
+/* Chat body with scrollbar */
+.chat-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex-grow: 1; /* Allows it to fill the remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Message styles */
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.kodee-message .message-bubble {
+  background-color: #2f343a;
+  color: #f1f1f1;
+}
+
+.user-message {
+  justify-content: flex-end; /* Align user messages to the right */
+}
+
+.user-message .message-bubble {
+  background-color: #7b46d3; /* A slightly darker purple for user messages */
+  color: #fff;
+}
+
+.message-avatar {
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+
+.avatar-icon {
+  padding: 0.5rem;
+  background-color: #9333ea;
+  border-radius: 9999px;
+  color: #fff;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.user-avatar {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+.message-bubble {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  max-width: 24rem;
+}
+
+/* Common questions styles */
+.common-questions {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.common-questions p {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.common-question-button {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #4b5563;
+  color: #f1f1f1;
+  background-color: #2f343a;
+  transition: background-color 0.2s;
+}
+
+.common-question-button:hover {
+  background-color: #3f444a;
+}
+
+/* Input and disclaimer styles */
+.chat-footer {
+  padding: 1rem;
+  border-top: 1px solid #2f343a;
+  background-color: #171b21;
+}
+
+.message-form {
+  position: relative;
+}
+
+.message-input {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  border: 1px solid #4b5563;
+  border-radius: 9999px;
+  outline: none;
+  background-color: #171b21;
+  color: #f1f1f1;
+  transition: box-shadow 0.2s;
+}
+
+.message-input:focus {
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.5);
+}
+
+.send-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 9999px;
+  color: #4b5563; /* Light gray color for the icon */
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.send-button:hover {
+  color: #9333ea;
+}
+
+.disclaimer {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-align: center;
+}
